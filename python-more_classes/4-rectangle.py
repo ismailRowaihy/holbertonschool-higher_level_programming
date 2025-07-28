@@ -22,9 +22,6 @@ class Rectangle:
                     print("#" * self.__width)
         return ""
 
-    def __del__(self):
-        print("Bye rectangle...")
-
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
 
