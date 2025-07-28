@@ -8,6 +8,7 @@ class Rectangle:
     """a Rectangle  class"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ initilize function"""
@@ -21,9 +22,9 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 if i == self.__height - 1:
-                    print("#" * self.__width, end="")
+                    print(self.print_symbol * self.__width, end="")
                 else:
-                    print("#" * self.__width)
+                    print(self.print_symbol * self.__width)
         return ""
 
     def __del__(self):
