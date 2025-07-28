@@ -22,9 +22,9 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 if i == self.__height - 1:
-                    print(self.print_symbol * self.__width, end="")
+                    print(str(self.print_symbol) * self.__width, end="")
                 else:
-                    print(self.print_symbol * self.__width)
+                    print(str(self.print_symbol) * self.__width)
         return ""
 
     def __del__(self):
