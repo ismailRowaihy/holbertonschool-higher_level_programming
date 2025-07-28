@@ -72,4 +72,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        for i, rect in enumerate((rect_1, rect_2), start=1):
+            if not isinstance(rect, Rectangle):
+                raise TypeError(f"rect_{i} must be an instance of Rectangle")
         return rect_1 if rect_1.area() >= rect_2.area() else rect_2
