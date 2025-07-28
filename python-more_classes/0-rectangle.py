@@ -4,7 +4,7 @@ this module is an emptiy class
 """
 
 
-class Rectangle :
+class Rectangle:
     """a Rectangle  class"""
     def __init__(self):
         """ initilize function"""
