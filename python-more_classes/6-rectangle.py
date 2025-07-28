@@ -6,10 +6,7 @@ this module is an emptiy class
 
 class Rectangle:
     """a Rectangle  class"""
-
     number_of_instances = 0
-    print_symbol = "#"
-
     def __init__(self, width=0, height=0):
         """ initilize function"""
         self.width = width
@@ -22,9 +19,9 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 if i == self.__height - 1:
-                    print(self.print_symbol * self.__width, end="")
+                    print("#" * self.__width, end="")
                 else:
-                    print(self.print_symbol * self.__width)
+                    print("#" * self.__width)
         return ""
 
     def __del__(self):
