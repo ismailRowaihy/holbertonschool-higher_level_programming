@@ -60,7 +60,3 @@ class Square:
         if self.__size == 0:
             print(" " * self.__position[0], end="")
             print()
-
-
-my_square_1 = Square(0,(1,1))
-my_square_1.my_print()
