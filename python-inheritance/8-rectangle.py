@@ -29,6 +29,3 @@ class Rectangle(BaseGeometry):
 
         self.__width = width
         self.__height = height
-
-
-print(issubclass(Rectangle, BaseGeometry))
