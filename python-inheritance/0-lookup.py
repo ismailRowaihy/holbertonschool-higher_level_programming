@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""this Module is a function that returns attributes and methods of an object """
+"""this Module is a function that returns
+attributes and methods of an object """
 
 
 def lookup(obj):
