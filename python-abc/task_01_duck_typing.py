@@ -3,7 +3,7 @@
 
 
 from abc import ABC, abstractmethod
-import math
+PI = 3.141592653589793
 
 
 class Shape(ABC):
@@ -25,10 +25,10 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return math.pi * (self.radius ** 2)
+        return PI * (self.radius ** 2)
 
     def perimeter(self):
-        return 2 * math.pi * self.radius
+        return 2 * PI * self.radius
 
 
 class Rectangle(Shape):
@@ -48,3 +48,9 @@ class Rectangle(Shape):
 def shape_info(obj):
     print(f"Area: {obj.area()}")
     print(f"Perimeter: {obj.perimeter()}")
+
+circle = Circle(radius=5)
+rectangle = Rectangle(width=4, height=7)
+
+shape_info(circle)
+shape_info(rectangle)
