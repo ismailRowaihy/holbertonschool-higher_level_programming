@@ -17,7 +17,7 @@ class Dog(Animal):
     """a class inherits from an abstract class"""
 
     def sound(self):
-        return "BARK"
+        return "Bark"
 
 
 class Cat(Animal):
