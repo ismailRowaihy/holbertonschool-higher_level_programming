@@ -5,7 +5,7 @@
 from abc import ABC, abstractmethod
 
 
-class animal(ABC):
+class Animal(ABC):
     """an abstract class"""
 
     @abstractmethod
@@ -13,14 +13,14 @@ class animal(ABC):
         pass
 
 
-class Dog(animal):
+class Dog(Animal):
     """a class inherits from an abstract class"""
 
     def sound(self):
         return "BARK"
 
 
-class Cat(animal):
+class Cat(Animal):
     """a class inherits from an abstract class"""
 
     def sound(self):
