@@ -3,6 +3,7 @@
 
 
 from abc import ABC, abstractmethod
+
 PI = 3.141592653589793
 
 
@@ -46,11 +47,5 @@ class Rectangle(Shape):
 
 
 def shape_info(obj):
-    print(f"Area: {obj.area()}")
-    print(f"Perimeter: {obj.perimeter()}")
-
-circle = Circle(radius=5)
-rectangle = Rectangle(width=4, height=7)
-
-shape_info(circle)
-shape_info(rectangle)
+    print("Area: {}".format(obj.area()))
+    print("Perimeter: {}".format(obj.perimeter()))
