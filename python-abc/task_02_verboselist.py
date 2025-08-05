@@ -5,9 +5,6 @@
 class VerboseList(list):
     """an VerboseList class"""
 
-    def __init__(self, aList):
-        super().__init__(aList)
-
     def append(self, item):
         super().append(item)
         print(f"Added [{item}] to the list.")
@@ -18,12 +15,10 @@ class VerboseList(list):
 
     def remove(self, item):
         if item not in self:
-            return None
+            print(f"[{item}] not in list.")
         print(f"Removed [{item}] from the list.")
         super().remove(item)
 
-    def pop(self, item=None):
-        if item is not None:
-            print(f"Popped [{super().pop(item)}] from the list.")
-        else:
-            print(f"Popped [{super().pop()}] from the list.")
+    def pop(self, item=-1):
+        print(f"Popped [{self[item]}] from the list.")
+        super().pop(item)
