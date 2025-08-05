@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 """this Module is about learning abc class """
-
-
 from abc import ABC, abstractmethod
-
-PI = 3.141592653589793
+from math import pi
 
 
 class Shape(ABC):
@@ -34,11 +31,11 @@ class Circle(Shape):
 
     def area(self):
         """a function"""
-        return PI * (self.radius ** 2)
+        return pi * (self.radius ** 2)
 
     def perimeter(self):
         """a function"""
-        return 2 * PI * self.radius
+        return 2 * pi * self.radius
 
 
 class Rectangle(Shape):
