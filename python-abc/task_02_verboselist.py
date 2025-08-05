@@ -14,18 +14,24 @@ class VerboseList(list):
 
     def extend(self, x):
         super().extend(x)
-        print(f"Extended the list with [{x}] items.")
+        print(f"Extended the list with [{len(x)}] items.")
 
     def remove(self, item):
         if item not in self:
             return None
-        super().remove(item)
         print(f"Removed [{item}] from the list.")
+        super().remove(item)
 
     def pop(self, item=None):
         if item is not None:
-            item = super().pop(item)
-            print(f"Popped [{item}] from the list.")
+            print(f"Popped [{super().pop(item)}] from the list.")
         else:
-            item = super().pop()
-            print(f"Popped [{item}] from the list.")
+            print(f"Popped [{super().pop()}] from the list.")
+
+
+vl = VerboseList([1, 2, 3])
+vl.append(4)
+vl.extend([5, 6])
+vl.remove(2)
+vl.pop()
+vl.pop(0)
