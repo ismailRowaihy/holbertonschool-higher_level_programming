@@ -12,10 +12,12 @@ class Shape(ABC):
 
     @abstractmethod
     def area(self):
+        """a function"""
         pass
 
     @abstractmethod
     def perimeter(self):
+        """a function"""
         pass
 
 
@@ -23,12 +25,15 @@ class Circle(Shape):
     """a circle class that inherits from shape"""
 
     def __init__(self, radius):
+        """a function"""
         self.radius = radius
 
     def area(self):
+        """a function"""
         return PI * (self.radius ** 2)
 
     def perimeter(self):
+        """a function"""
         return 2 * PI * self.radius
 
 
@@ -36,16 +41,20 @@ class Rectangle(Shape):
     """a Rectangle class that inherits from shape"""
 
     def __init__(self, width, height):
+        """a function"""
         self.width = width
         self.height = height
 
     def area(self):
+        """a function"""
         return self.width * self.height
 
     def perimeter(self):
+        """a function"""
         return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
+    """a function"""
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
