@@ -21,4 +21,5 @@ class VerboseList(list):
 
     def pop(self, item=-1):
         print(f"Popped [{self[item]}] from the list.")
-        super().pop(item)
+        item = super().pop(item)
+        return item
