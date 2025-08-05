@@ -2,10 +2,9 @@
 """this Module is about learning abc class """
 
 
-from abc import ABC, abstractmethod
-
-
 class VerboseList(list):
+    """an VerboseList class"""
+
     def __init__(self, aList):
         super().__init__(aList)
 
