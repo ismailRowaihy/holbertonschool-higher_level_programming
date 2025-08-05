@@ -15,7 +15,7 @@ class VerboseList(list):
 
     def remove(self, item):
         if item not in self:
-            print(f"[{item}] not in list.")
+            return f"[{item}] not in list."
         print(f"Removed [{item}] from the list.")
         super().remove(item)
 
