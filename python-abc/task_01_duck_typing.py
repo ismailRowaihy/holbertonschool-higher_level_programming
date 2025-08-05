@@ -8,7 +8,9 @@ PI = 3.141592653589793
 
 
 class Shape(ABC):
-    """an abstract class"""
+    """
+    an abstract class that does a thing
+    """
 
     @abstractmethod
     def area(self):
@@ -22,7 +24,9 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-    """a circle class that inherits from shape"""
+    """
+    a circle class that inherits from shape
+    """
 
     def __init__(self, radius):
         """a function"""
@@ -38,7 +42,9 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
-    """a Rectangle class that inherits from shape"""
+    """
+    a Rectangle class that inherits from shape
+    """
 
     def __init__(self, width, height):
         """a function"""
