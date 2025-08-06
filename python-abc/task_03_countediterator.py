@@ -3,6 +3,8 @@
 
 
 class CountedIterator:
+    """an CountedIterator class"""
+
     def __init__(self, iterator, count=0):
         self.iterator = iter(iterator)
         self.count = count
