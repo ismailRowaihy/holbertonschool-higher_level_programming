@@ -16,5 +16,4 @@ except:
     old_file = []
 
 alist = old_file + [args for args in sys.argv[1:]]
-save_to_json_file(alist,"add_item.json")
-
+save_to_json_file(alist, "add_item.json")
