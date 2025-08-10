@@ -12,7 +12,7 @@ save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 
 try:
     old_file = load_from_json_file("add_item.json")
-except:
+except Exception as e:
     old_file = []
 
 alist = old_file + [args for args in sys.argv[1:]]
