@@ -11,7 +11,6 @@ def fetch_and_print_posts():
     print (f"Status Code : {rr.status_code}")
     for i in data:
         print (i["title"])
-        print ("__")
 
 def fetch_and_save_posts():
     fieldnames = data[0].keys()
@@ -19,3 +18,7 @@ def fetch_and_save_posts():
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data) 
+
+
+fetch_and_print_posts()
+fetch_and_save_posts()
