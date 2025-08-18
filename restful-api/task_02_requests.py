@@ -14,8 +14,10 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
-    fieldnames = data[0].keys()
-    with open("posts.csv", "w") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(data)
+    if rr.status_code >= 200 and rr.status_code < 300:
+
+        fieldnames = data[0].keys()
+        with open("posts.csv", "w") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data)
