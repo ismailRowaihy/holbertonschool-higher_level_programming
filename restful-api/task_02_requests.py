@@ -15,7 +15,7 @@ def fetch_and_print_posts():
 
 def fetch_and_save_posts():
     rr = requests.get("https://jsonplaceholder.typicode.com/posts")
-
+    data = rr.json()
     Fdata = [{k:v for k,v in x.items() if k != 'userId'} for x in data]
     if rr.status_code >= 200 and rr.status_code < 300:
         fieldnames = Fdata[0].keys()
