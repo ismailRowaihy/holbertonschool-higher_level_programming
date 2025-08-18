@@ -2,20 +2,20 @@
 
 import requests
 import csv
-import json
 
-rr = requests.get('https://jsonplaceholder.typicode.com/posts')
+rr = requests.get("https://jsonplaceholder.typicode.com/posts")
 data = rr.json()
 
+
 def fetch_and_print_posts():
-    print (f"Status Code : {rr.status_code}")
+    print(f"Status Code : {rr.status_code}")
     for i in data:
-        print (i["title"])
+        print(i["title"])
+
 
 def fetch_and_save_posts():
     fieldnames = data[0].keys()
-    with open('posts.csv', 'w') as csvfile:
+    with open("posts.csv", "w") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(data) 
-
+        writer.writerows(data)
