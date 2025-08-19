@@ -38,6 +38,6 @@ class HTTPhandler(BaseHTTPRequestHandler):
             self.wfile.write(bytes(massage, "utf8"))
 
 
-server = HTTPServer(("", 80), HTTPhandler)
+server = HTTPServer(("", 8000), HTTPhandler)
 server.serve_forever()
 server.server_close()
