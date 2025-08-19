@@ -12,6 +12,12 @@ class HTTPhandler(BaseHTTPRequestHandler):
             self.end_headers()
             massage = "Hello, this is a simple API!"
             self.wfile.write(bytes(massage, "utf8"))
+        elif self.path == "/status":
+            self.send_response(200)
+            self.send_header("Content-type", "text/html")
+            self.end_headers()
+            massage = "OK"
+            self.wfile.write(bytes(massage, "utf8"))
         elif self.path == "/data":
             self.send_response(200)
             self.send_header("Content-type", "application/json")
@@ -32,6 +38,6 @@ class HTTPhandler(BaseHTTPRequestHandler):
             self.wfile.write(bytes(massage, "utf8"))
 
 
-server = HTTPServer(("", 8000), HTTPhandler)
+server = HTTPServer(("", 80), HTTPhandler)
 server.serve_forever()
 server.server_close()
