@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 
-from flask import Flask,jsonify
+from flask import Flask,jsonify,request
 
 
 app = Flask(__name__)
-users = {
-        "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-        "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
-        }
 
 @app.route('/')
 def home():
@@ -28,5 +24,13 @@ def usersPage(username):
 def DataPage():
     return jsonify(list(users.keys()))
 
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    newUser = request.get_json()
+    if "username" not in newUser.keys():
+        return {"error":"Username is required"},400
+    
+    users[newUser["username"]] = newUser
+    return {"message": "User added","user":newUser},201
 
-if __name__ == "__main__": app.run(host='0.0.0.0', port=80)
+if __name__ == "__main__": app.run()
