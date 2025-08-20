@@ -17,7 +17,7 @@ def statusPage():
 @app.route('/users/<username>')
 def usersPage(username):
     if username  not in users.keys():
-        return {"error": "User not found"},400
+        return {"error": "User not found"},404
     else:
         return jsonify(users[username])
         
