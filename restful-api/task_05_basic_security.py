@@ -25,7 +25,7 @@ def verify_password(username, password):
 @app.get("/basic-protected")
 @auth.login_required
 def basic_protected():
-    return {"message": "Basic Auth: Access Granted"}, 200
+    return "Basic Auth: Access Granted", 200
 
 @app.post("/login")
 def login():
@@ -46,7 +46,7 @@ def login():
 @app.get("/jwt-protected")
 @jwt_required()
 def jwt_protected():
-    return jsonify({"message": "JWT Auth: Access Granted"}),200
+    return "JWT Auth: Access Granted",200
 
 @app.get("/admin-only")
 @jwt_required()
@@ -55,7 +55,7 @@ def admin_only():
     role = JWT_TOKEN.get("role")
 
     if role =="admin":
-        return jsonify({"message": "Admin Access: Granted"}),200
+        return "Admin Access: Granted",200
     return jsonify({"error": "Admin access required"}),403
 
 @jwt.unauthorized_loader
