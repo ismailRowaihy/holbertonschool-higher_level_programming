@@ -1,0 +1,6 @@
+-- script that lists all shows that have at least one genre linked
+SELECT ts.title,
+        tsg.genre_id
+FROM tv_shows ts INNER JOIN tv_show_genres tsg
+WHERE ts.id = tsg.show_id
+ORDER BY ts.title ASC , tsg.genre_id ASC;
