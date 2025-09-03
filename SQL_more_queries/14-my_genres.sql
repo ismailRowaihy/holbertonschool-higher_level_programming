@@ -1,3 +1,4 @@
+-- script that lists all genres of a show
 SELECT tg.name AS name
 FROM tv_genres tg INNER JOIN tv_show_genres tsg
 ON tg.id = tsg.genre_id 
