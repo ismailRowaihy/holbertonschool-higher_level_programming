@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """this Module is a python script
 that sends a query and prints it"""
 
