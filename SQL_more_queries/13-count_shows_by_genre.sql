@@ -4,5 +4,5 @@ SELECT tg.name as genre,
 FROM tv_genres tg INNER JOIN tv_show_genres tsg
 ON tg.id = tsg.genre_id
 GROUP BY tg.name
-HAVING COUNT(tsg.show_id) > 0
+HAVING number_of_shows > 0 
 ORDER BY number_of_shows DESC;
