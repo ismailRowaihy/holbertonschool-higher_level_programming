@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cur.execute(
         "SELECT * FROM states \
          WHERE BINARY states.name = %s \
-         ORDER BY states.id ASC",(sys.argv[4],)
+         ORDER BY states.id ASC", (sys.argv[4],)
     )
     query_rows = cur.fetchall()
     for row in query_rows:
