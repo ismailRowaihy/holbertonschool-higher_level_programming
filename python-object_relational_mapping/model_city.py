@@ -2,8 +2,9 @@
 """this Module is a class/table definiton"""
 
 
-from sqlalchemy import Column, Integer, String , ForeignKey  
+from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
+
 
 class City(Base):
     """a class to rebesent a table"""
