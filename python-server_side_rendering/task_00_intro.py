@@ -24,7 +24,8 @@ def generate_invitations(template, attendees):
         new_template = template
         for k,v in atnd.items():
             #print(str(k)+" : "+str(v))
-            new_template = new_template.replace("{"+str(k)+"}",str(v)if v else str(k)+": N/A")
+            new_template = new_template.replace("{"+str(k)+"}",str(v)if v else "N/A")
         
         with open(f"output_{i}.txt", "w") as file:
             file.write(new_template)
+            print(new_template)
