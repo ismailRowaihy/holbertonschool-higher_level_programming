@@ -20,10 +20,13 @@ def generate_invitations(template, attendees):
         print ("No data provided, no output files generated.")
         return
     
+    atnd_blup = ["name", "event_title", "event_date", "event_location"]
+    
     for i,atnd in enumerate(attendees,start=1):
         new_template = template
-        for k,v in atnd.items():
-            #print(str(k)+" : "+str(v))
+        
+        for k in atnd_blup:
+            v = atnd.get(k,None)
             new_template = new_template.replace("{"+str(k)+"}",str(v)if v else "N/A")
         
         with open(f"output_{i}.txt", "w") as file:
